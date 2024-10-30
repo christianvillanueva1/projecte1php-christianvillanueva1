@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body class="bg-gray-100">
+<?php require '../resources/views/layout/nav.blade.php'; ?>
+    <section>
+        <div class="max-w-lg mx-auto bg-white shadow-md rounded-lg p-6">
+            <h1 class="text-3xl font-bold mb-4">Album Details</h1>
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700"><strong>Name: </strong> <?= htmlspecialchars($album->name) ?></label>
+            </div>
+            <div class="mb-4">
+                <label for="singer" class="block text-gray-700"><strong>Singer: </strong><?= htmlspecialchars($album->singer) ?></label>
+            </div>
+            <div class="mb-4">
+                <label for="songs" class="block text-gray-700"><strong>Total Songs: </strong><?= htmlspecialchars($album->songs) ?></label>
+            </div>
+            <div class="mb-4">
+                <label for="year" class="block text-gray-700"><strong>Release year: </strong><?= htmlspecialchars($album->year) ?></label>
+            </div>
+            <a href="/albums" class="text-gray-500 hover:underline mt-4 block">Return</a>
+        </div>
+    </section>
+<?php require '../resources/views/layout/footer.blade.php'; ?>
+</body>
+</html>

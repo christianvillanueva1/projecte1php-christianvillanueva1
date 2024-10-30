@@ -1,0 +1,93 @@
+
+section{
+    padding-top: 100px !important;
+    height: calc(100vh - 50px) !important;
+}
+.left {
+    float: left;
+    width: 50%;
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* Para evitar que la imagen se desborde */
+    position: relative;
+}
+
+.left::before {
+    content: "";
+    background-image: url("/assets/films.png");
+    background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.left:hover::before {
+    transform: scale(1.2); /* Efecto de escala en hover */
+}
+
+
+.right {
+    float: right;
+    width: 50%;
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* Para ocultar la imagen cuando se escala */
+    position: relative;
+}
+
+.right::before {
+    content: "";
+    background-image: url("/assets/albums.jpg");
+    background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out; /* Transición suave para el hover */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.right:hover::before {
+    transform: scale(1.2); /* Efecto de escala en hover */
+}
+
+h1{
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.neu-button {
+    background-color: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+    color: #4d4d4d;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 15px 40px;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid rgb(206, 206, 206);
+}
+
+.neu-button:hover {
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
+
+.neu-button:focus {
+    outline: none;
+    box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff, 2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+}
